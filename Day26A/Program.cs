@@ -4,8 +4,6 @@ namespace Day26A
 {
     public class Program
     {
-        public class Program
-        {
 
             public static bool func()
             {
@@ -25,6 +23,5 @@ namespace Day26A
             {
                 Program.func();
             }
-        }
     }
 }
