@@ -6,15 +6,23 @@ namespace Day26A
     {
         public static void Main(string[] args)
         {
-            string email = "abc@yahoo.com";
-
-            if (Regex.IsMatch(email, @"^[a-zA-Z0-9@.]+$"))
+            public static bool func()
             {
-                Console.WriteLine("Valid");
+                Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+                string email = "abc-100@yahoo.com";
+                Match match = regex.Match(email);
+                if (match.Success)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
-            else
+            public static void Main(string[] args)
             {
-                Console.WriteLine("Invalid");
+                Program.func();
             }
         }
     }
